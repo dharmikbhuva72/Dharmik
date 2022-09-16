@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet'>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;margin: 0px; padding: 0px;
+		}
+
+		.x{
+			width: 100%px;
+		}
+
+		.x .header{
+			height: 100px;
+			width: 100%;
+			display: flex;
+			box-shadow: 0 0 2px white inset;
+			background: #ECD8BD;
+		}
+
+		.x .header .logo{
+			height: 100px;
+			width: 10%;
+			background: url(https://logos-world.net/wp-content/uploads/2020/05/Burger-King-Logo.png) ;
+			background-size: 100% 100%;
+		}
+
+		.x .header .name span{
+			height: 100px;
+			width: 90%;
+			font-family: 'bevan';
+			font-size: 85px;
+			color: #5B3434;
+			margin-left: 330px;
+			line-height: 100px;			
+		}
+		.nev{
+			display: flex;
+		}
+
+		.nevigation{
+			height: 50px;
+			width: 80%;
+			background: #DEDEB1;
+			text-align: left;
+			padding: 0 70px;
+			line-height: 50px;
+			font-size: 20px;
+			color: black;
+		}
+
+		.nevigation .menu .submenu{
+			display: inline;
+			margin-right: 10px;
+			padding: 17px 10px;
+		}
+
+		.menu .submenu a:hover {
+			color: orange;
+		}
+
+		.nevigation .menu .submenu a{
+			text-decoration: none;
+		}
+
+		.dropdown a{
+			text-decoration: none;
+		}
+
+		.dropdown{
+			display: none;
+			position: absolute;
+			left: 5.5%;
+			background:lightblue;
+		}
+
+		.x{
+			left: 11.5%;
+			height: 150px;
+		}
+
+		.y{
+			left: 17.5%;
+			height: 150px;
+		}
+
+		.z{
+			left: 24.2%;
+			height: 150px;
+		}
+
+		.nevigation .menu .submenu:hover .dropdown{
+			display: block;
+		}
+		 .nev .srch{
+		 	height:50px;
+		 	width: 20%;
+		 	background: #DEDEB1;
+		 	line-height: 50px;
+		}
+		
+		.srch i{
+			background:#A3A389;
+			color: white;
+			height: 20px;
+			width: 20px;
+			text-align: center;
+		}
+		.srch input{
+			background: transparent;
+			border-radius: 10px;
+			height: 30px;
+			text-align: center;
+			box-shadow: -2px -2px 10px gray inset,2px 2px 10px white inset; 
+			border: none;
+			margin: 3px;
+		}
+
+		.content{
+			width: 100%;	
+		}
+
+		.content1{
+			height: 400px;
+			width: 100%;
+			background: #ECD8BD;
+			display: flex;
+		}
+
+		.content1 .a{
+			height: 400px;
+			width: 25%;
+			padding: 10px;
+		}
+
+		.content1 .a img{
+			border-radius: 20px;
+			transition: 2s;
+		}
+
+		.content1 .a img:hover{
+			transform: scale(.8);
+		}
+
+		.content2{
+			height: 400px;
+			width: 100%;
+			background: #ECD8BD;
+			display: flex;
+		}
+
+		.content2 .b{
+			height: 400px;
+			width: 50%;
+			border-radius : 20px;
+			overflow:hidden;
+			padding: 30px;
+		}
+		.b img{
+			transition: 2s;
+            border-radius: 20px;
+		}
+
+		.content2 .c img{
+			transition: 1s;
+		}
+
+		 .content2 img:hover{
+			transform: scale(1.1);
+			background:orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="x">
+		
+		<div class="header">
+			<div class="logo"></div>
+			<div class="name"><span>burger king</span></div>
+		</div>
+
+		<div class="nev" >
+
+		<div class="nevigation">
+			<ul class="menu">
+				<li class="submenu">
+					<a href="" >Home</a>
+					<ul class="dropdown">
+						<a href="">home 1</a><br>
+						<a href="">home 2</a><br>
+						<a href="">home 3</a>
+
+					</ul>
+				</li>
+
+				<li class="submenu">
+					<a href="">about</a>
+					<ul class="dropdown x">
+						<a href="">about 1</a><br>
+						<a href="">about 2</a><br>
+						<a href="">about 3</a>
+
+					</ul>
+
+				</li>
+				<li class="submenu">
+					<a href="">service</a>
+					<ul class="dropdown y">
+						<a href="">service 1</a><br>
+						<a href="">service 2</a><br>
+						<a href="">service 3</a>
+
+					</ul>
+				</li>
+				<li class="submenu">
+					<a href="">contact</a>
+					<ul class="dropdown z">
+										<a href="">contact1</a><br>
+						<a href="">contact2</a><br>
+						<a href= "">contact3</a>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+        
+		<div class="srch">
+			<input type="text" name="" placeholder="search">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			
+		</div>
+
+
+		</div>
+
+		<div class="content">
+			<div class="content1">
+			    <div class="a">
+				    <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=600" height="100%" width="100%">
+			    </div>
+			    <div class="a">
+				    <img src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&w=600" height="100%" width="100%">
+			    </div>
+			    <div class="a">
+				    <img src="https://images.pexels.com/photos/2454533/pexels-photo-2454533.jpeg?auto=compress&cs=tinysrgb&w=600" height="100%" width="100%">
+			    </div>
+			    <div class="a">
+				    <img src="https://images.pexels.com/photos/1600743/pexels-photo-1600743.jpeg?auto=compress&cs=tinysrgb&w=600"height="100%" width="100%">
+			    </div>
+			</div>
+			<div class="content2">
+				<div class="b">
+				    <img src="https://themeforest.img.customer.envatousercontent.com/files/136712945/theme-preview/01_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=decd4b8da53b277c0b263c6b1fd60f67" height="100%" width="100%">
+			    </div>
+			    <div class="b c">
+				    <img src="xyz.png" height="100%" width="100%">
+			    </div>
+			</div>
+
+		</div>
+		<div>
+			<img src="https://i.pinimg.com/originals/6e/4d/19/6e4d1920e4d14d480cfaaef97df7ba44.jpg" height="100%" width="100%">
+		</div>
+
+	</div>
+
+</body>
+</html>
