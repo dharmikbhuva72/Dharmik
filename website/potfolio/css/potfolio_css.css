@@ -1,0 +1,135 @@
+@font-face{
+	font-family:pt_sans;
+	src:url(../font_family/PT-sans/PTSans-Bold.ttf);
+
+}
+@font-face{
+	font-family:pacifico;
+	src:url(../font_family/Pacifico/Pacifico-Regular.ttf);
+
+}
+@font-face{
+	font-family:Montserrat;
+	src:url(../font_family/Montserrat/Montserrat-ExtraLight.ttf);
+}
+
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+.header{
+	height: 450px;
+	width: 100%;
+	background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../img/img1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.header .nev{
+	height: 80px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #ABB2B9;
+}
+.header .nev .logo{
+	height: 80px;
+	width: 20%;
+	padding: 0px 40px;
+}
+.header .nev .menu{
+    height: 80px;
+	width: 80%;
+	text-align: right;
+	line-height: 100px;
+	padding-right: 70px;
+}
+.header .nev .menu li{
+	display: inline;
+	margin: 0px 10px;
+	position: relative;
+}
+.header .nev .menu li::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 5px;
+    background:white;
+    transition: 1s;
+    width: 0%;
+}
+.header .nev .menu li::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 5px;
+    width: 0%;
+    background:white;
+    transition: 1s;
+}
+.header .nev .menu li:hover::before{
+	width: 50%;
+	left: 0%;
+}
+.header .nev .menu li:hover::after{
+	width: 50%;
+}
+.header .nev .menu a{
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgba(255,255,255,.55);
+}
+.header .text{
+	height: 370px;
+	width: 100%;
+	text-align: center;
+	padding-top: 140px;
+}
+.header .text h1{
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-family:pacifico;
+    color: #CCCCFF;
+}
+.heding{
+	font-size: 40px;
+	font-family: Pt_sans;
+	margin:10px 40px;
+	color: #4F4F4F;
+	position: relative;
+	width: 140px;
+}
+.heding::after{
+	content:"";
+	height: 4px;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	background: #4F4F4F;
+
+
+}
+
+.project{
+	width: 100%;
+	display: flex;
+	padding: 20px 20px;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.project .a1{
+	height: 400px;
+	width: 50%;
+	padding: 10px 20px;
+	position: relative;
+	overflow: hidden;
+	transform: scale(1.0);
+	transition: 1s;
+}
+.project .a1 img{
+	border-radius: 40px;
+	box-shadow: 0px 0px 10px grey;
+}
+.project .a1:hover{
+	transform:scale(0.9);
+}

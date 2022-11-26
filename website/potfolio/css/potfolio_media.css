@@ -1,0 +1,28 @@
+@media(min-width: 500px)
+{
+	.header .text h1{font-size: 40px;}
+	.header .nev .logo{height: 100px; width: 28%;margin-left: -35px;}
+    .header .nev .menu{padding-right: 0px;}
+    .project{padding: 0px 0px;margin-top: 10px;}
+    .project .a1{width: 100%; margin-top: 20px;}
+
+}
+@media(min-width: 700px)
+{
+   .header .text h1{font-size: 45px;}
+   .header .nev .logo{padding: 0px 0px;margin-left: 0px;}
+   .header .nev .menu{padding-right: 70px;}
+   .project .a1{width: 50%; margin-top: 0px;}
+	
+}
+@media(min-width: 900px)
+{
+	.header .text h1{font-size: 60px;}
+	.header .nev .logo{padding: 0px 40px;}
+}
+@media(min-width: 1200px)
+{
+	
+
+	
+}

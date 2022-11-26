@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box; margin: 0px; padding: 0px;
+		}
+		.nev{
+			height: 100px;
+			width: 100%;
+			background: lightblue;
+			text-align:center ;
+			line-height: 100px;
+			position: relative;
+		}
+		.menu .a{
+			list-style: none;
+			background: red;
+			display: inline;
+			margin: 10px;
+			padding: 42px 10px;
+
+		}
+		.submenu{
+			display: none;
+			position: absolute;
+			background: orange;
+			left: 38.5%;
+			top: 100px;
+		}
+		.a .x{
+			left: 44.3%;
+		}
+		.a .y{
+			left: 50.2%;
+		}
+		.a .z{
+			left: 56.6%;
+		}
+		.menu .a:hover .submenu{
+			display: block;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="nev">
+		<ul class="menu">
+			<li class="a">
+				<a href="">home</a>
+				<ul class="submenu ">
+					<a href="">home1</a>
+					<a href="">home2</a>
+					<a href="">home3</a>
+					<a href="">home4</a>
+					<a href="">home5</a>
+				</ul>
+			</li>
+			<li class="a"><a href="">about</a>
+				<ul class="submenu x ">
+					<a href="">about1</a>
+					<a href="">about2</a>
+					<a href="">about3</a>
+					<a href="">about4</a>
+					<a href="">about5</a>
+				</ul>
+			</li>
+			<li class="a"><a href="">service</a>
+                <ul class="submenu y ">
+					<a href="">service 1</a>
+					<a href="">service 2</a>
+					<a href="">service 3</a>
+					<a href="">service 4</a>
+					<a href="">service 5</a>
+				</ul>
+			</li>
+			<li class="a"><a href="">contact</a>
+		   <ul class="submenu z ">
+					<a href="">contact 1</a>
+					<a href="">contact 2</a>
+					<a href="">contact 3</a>
+					<a href="">contact 4</a>
+					<a href="">contact 5</a>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+
+	</div>
+
+</body>
+</html>

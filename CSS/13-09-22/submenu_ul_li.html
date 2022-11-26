@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box; margin: 0px; padding: 0px;
+		}
+		.nevigation{
+			height: 100px;
+			width: 100%;
+			background: lightblue;
+			text-align: center;
+			line-height: 100px;
+			position: relative;
+		
+		}
+		.menu .a {
+			display: inline;
+			margin: 10px;
+			padding: 42px 8px;
+			
+
+		}
+		.menu .a a{
+			text-decoration: none;
+		}
+		
+
+		.submenu{
+			display: none;
+			position: absolute;
+			background: orange;
+			left: 50%;
+			top: 100%;
+		}
+		.menu .a:hover .submenu{
+			display: block;
+		}
+		.submenu a{
+			margin: 5px;
+			text-decoration: none;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="nevigation">
+		<ul class="menu">
+			<li class="a"><a href="">home</a></li>
+			<li class="a"><a href="">about</a></li>
+			<li class="a">
+				<a href="">service</a>
+				
+
+				<ul class="submenu">
+					<a href="">ser1</a>
+					<a href="">ser2</a>
+					<a href="">ser3</a>
+					<a href="">ser4</a>
+				</ul>
+
+
+			</li>
+			<li class="a"><a href="">contact</a></li>
+
+			
+		</ul>
+	</div>
+
+</body>
+
+
+</html>
