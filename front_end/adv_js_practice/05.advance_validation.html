@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit=" return validation()" method="post">
+        <table border="1" align="center">
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" id="name" onblur="validation(this,'nameErrer')" onkeyup="nameerr(this,'nerr')">
+                    <span id="nameErrer"></span>
+                    <span id="nerr"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email" id="email" onblur="validation(this,'emailErrer')" onkeyup="emailerr(this,'eerr')">
+                    <span id="emailErrer"></span>
+                    <span id="eerr"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="pwd" id="pwd" onblur="validation(this,'PasswordErrer')" onkeyup="passworderr(this,'perr')">
+                    <span id="PasswordErrer"></span>
+                    <span id="perr"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>confirm Password</td>
+                <td>
+                    <input type="password" name="pwd1" id="pwd1" onblur="validation(this,'PasswordErrer')" onkeyup="cpassworderr(this,'cperr')">
+                    <span id="PasswordErrer"></span>
+                    <span id="cperr"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>
+                    <input type="text" name="mobile" id="mobile" onblur="validation(this,'MobileErrer')" onkeyup="mobileerr(this,'merr')">
+                    <span id="MobileErrer"></span>
+                    <span id="merr"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="submit" id="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <Script>
+        
+        function validation(e,spnid){
+
+            if(e.value == "")
+            {
+                document.getElementById(spnid).style.color ="red"
+                document.getElementById(spnid).innerText="Plase Enter data";
+
+
+            }
+            else
+            {
+                document.getElementById(spnid).innerText="";
+            }
+
+        }
+
+        function nameerr(e,spnid){
+            var name = /^[a-zA-Z]+$/
+            if(name.test(e.value))
+            {
+                document.getElementById(spnid).innerHTML="";
+            }
+            else
+            {
+                document.getElementById(spnid).style.color="red";
+                document.getElementById(spnid).innerHTML="Plase enter only charechters";
+            }
+        }
+
+
+        function emailerr(e,spnid){
+            var email = /^([a-z0-9])+@([a-z0-9.-_])+\.([a-z]{2,3})$/
+            if(email.test(e.value))
+            {
+                document.getElementById(spnid).innerHTML="";
+            }
+            else
+            {
+                document.getElementById(spnid).style.color="red";
+                document.getElementById(spnid).innerHTML="plase valid Email";
+            }
+        }
+        function passworderr(e,spnid){
+            var password= /^[a-z0-9A-Z]{6,8}$/
+            if(password.test(e.value))
+            {
+                document.getElementById(spnid).innerHTML="";
+            }
+            else
+            {
+                document.getElementById(spnid).style.color="red";
+                document.getElementById(spnid).innerHTML="please enter 6 to 8 charechter only";
+            }
+        }
+        function cpassworderr(e,spnid){
+            x = document.getElementById("pwd").value;
+            if(x == e.value)
+            {
+                document.getElementById(spnid).innerHTML="";
+            }
+            else
+            {
+                document.getElementById(spnid).style.color="red";
+                document.getElementById(spnid).innerHTML="do not match password";
+            }
+        }
+        function mobileerr(e,spnid){
+            var mobile= /^[0-9]{10}$/
+            if(mobile.test(e.value))
+            {
+                document.getElementById(spnid).innerHTML="";
+            }
+            else
+            {
+                document.getElementById(spnid).style.color="red";
+                document.getElementById(spnid).innerHTML="plase valid number";
+            }
+        }
+    </Script>
+
+</body>
+</html>
+

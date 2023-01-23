@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function person(fname,lname)
+        {
+            this.fname = fname;
+            this.lname = lname;
+        }
+    const data = new person("dharmik","bhuva");
+    console.log(data);
+
+    
+    person.prototype.mydata = function(age,birthdate,fname,lname){
+        person(this,lname,fname);
+        this.age = age;
+        this.birthdate = brithdate;
+    }
+    var std = 
+    </script>
+    
+</body>
+</html>

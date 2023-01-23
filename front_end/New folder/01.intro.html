@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const favnum =  prompt("enter the fav number");
+
+        console.log(favnum);
+        console.log(typeof favnum);
+
+        if(favnum === 20)
+        {
+            console.log("number 20 is cool");
+        }
+        else{
+            console.log("number is not match");
+        }
+
+
+        let a=10,b=30,c=18;
+
+        // max = (a>b)?((a>c)? ):((b>c)?())
+
+        max = (a>b)? ((a>c)?a:c):((b>c)? b:c)
+
+        console.log(`max number is ${max}`);
+    </script>
+</body>
+</html>

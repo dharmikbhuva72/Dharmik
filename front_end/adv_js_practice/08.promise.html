@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+            const mypro = new Promise((ha,na) =>{
+               var a = 5;
+               var b = 5; 
+            if(a == b)
+            {
+                ha("both are equal");
+            }
+            else
+            {
+                na("both are not equal");
+            }
+        }).then((res)=>{
+            console.log(res)
+        }).catch((error)=>{
+            console.log(error);
+        }) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<form onsubmit="return getdata()" method="post">
+		<table border="1" align="center">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" id="name"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="email" id="email"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="pwd" id="pwd"></td>
+			</tr>
+			<tr>
+				<td>mobile</td>
+				<td><input type="text" name="mobile" id="mobile"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="sumbit" id="sumbit"></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<script type="text/javascript">
+
+		function getdata()
+		{
+			let name = document.getElementById('name').value;
+			if(name == "")
+			{
+				alert("plase Enter Name!");
+				document.getElementById('name').focus();
+				return false;
+			}
+
+			 let email = document.getElementById('email').value;
+			if(email == "")
+			{
+				alert("plase Enter Email!");
+				document.getElementById('email').focus();
+				return false;
+			}
+			let pass = document.getElementById('pwd').value;
+			if(pass == "")
+			{
+				alert("plase Enter password");
+				document.getElementById('pwd').focus();
+				return false;
+			}
+			let mobile = document.getElementById('mobile').value;
+			if(mobille == "")
+			{
+				alert("plase Enter Mobile number!");
+				document.getElementById('mobile').focus();
+				return false;
+			}
+		}
+
+	</script>
+
+
+</body>
+</html>

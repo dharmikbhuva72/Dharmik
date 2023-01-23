@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+
+        .main{
+            height: 100vh;
+            width: 100%;
+            color: white;
+            background: black;
+        }
+        .part1{
+            width: 100%;
+            
+            border-bottom:5px solid white ;
+            position: relative;
+        }
+        button{
+            height: 50px;
+            width: 150px;
+            background: white;
+            color: black;
+            margin: 30px 0px 0px 50px ;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            border: none;
+        }
+        h1{
+            font-size: 40px;
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        input{
+            height: 100px;
+            width: 200px;
+            border: 2px solid white;
+            outline: none;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            background: transparent;
+        
+        }
+        .part2{display: flex;}
+        .p1{
+            width: 50%;
+            text-align: right;
+            padding-top: 100px;
+            padding-right: 40px;
+        }
+        .p1 .check{
+            margin-right: 25px;
+        }
+        p{
+            margin: 20px 0px 0px 40px ;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        .message{
+            margin-top: 90px;
+        }
+        .pscore{
+            margin-top: 80px;
+        }
+        .number{
+            position: absolute;
+            top: 83%;
+            left: 46.5%;
+            height: 100px;
+            width: 100px;
+            background: white;
+            font-size: 80px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="part1">
+            <button class="button again">Again</button>
+            <h1>Guess my Number!</h1>
+            <div class="number">?</div>
+        </div>
+        <div class="part2">
+            <div class="p1">
+                <input type="text" class="" id="guessnumber"><br>
+                <button class="button check">Check!</button>
+            </div>
+            <div class="p2">
+                <p class="message">Start Guess Number!</p>
+                <p class="pscore" >score: <span class="score">20</span> </p>
+                <p>highscore: <span class="highscore">0</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    let secretnumber = Math.trunc(Math.random()*100)+1;
+    console.log(secretnumber);
+
+    let score = 20;
+
+
+    document.querySelector(".check").addEventListener("click",function(){
+
+       let num = Number(document.getElementById("guessnumber").value);
+    //    console.log(num);
+
+       if(!num)
+       {
+           document.querySelector(".message").textContent = "Enter Number";
+       }
+       else if(num === secretnumber)
+       {
+            document.querySelector(".message").textContent = "cureect number";
+            document.querySelector(".number").textContent = secretnumber;
+            document.querySelector(".highscore").textContent = score;
+            document.querySelector(".main").style.background = "green";
+            document.querySelector(".number").style.width = "150px"
+
+       }
+
+       else if(num > secretnumber)
+       {
+           if(score > 1)
+           {
+                document.querySelector(".message").textContent = "To high Number";
+                score--;
+                document.querySelector(".score").textContent = score;
+
+           }
+           else
+           {
+            document.querySelector(".message").textContent = "you loss game";
+           }
+            
+       }
+       else if(num < secretnumber)
+       {
+        if(score > 1)
+           {
+                document.querySelector(".message").textContent = "To Low Number";
+                score--;
+                document.querySelector(".score").textContent = score;
+           }
+           else
+           {
+            document.querySelector(".message").textContent = "you loss game";
+           }
+       }
+
+    })
+
+    document.querySelector(".again").addEventListener("click",function(){
+        score = 20;
+         secretnumber = Math.trunc(Math.random()*100)+1;
+        console.log(secretnumber);
+        document.querySelector(".message").textContent = "strat guessnumber";
+        document.querySelector(".number").textContent = "?"; 
+        document.querySelector("#guessnumber").value="";
+        document.querySelector(".score").textContent = score;
+    })
+
+
+
+
+
+
+
+
+
+
+
+// const a = Math.trunc(Math.random()*100)+1;
+//     console.log(a);
+//     document.querySelector(".Guessnumber").textContent = a;
+
+//     const Guessnumber = a;
+
+// document.querySelector(".check").addEventListener("click",function(){
+
+//     let num = Number( document.getElementById("number").value);
+//     console.log(num);
+//     console.log(typeof num);
+
+
+//        if(!num)
+//        {
+//             let num1 =  document.querySelector(".correct").textContent="no Number!";
+//             console.log(num1);           
+
+//        }
+//        else if(num > )
+//        {
+
+//        }
+// })
+    
+
+
+</script>
